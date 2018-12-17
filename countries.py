@@ -3,8 +3,8 @@
 # Solution:
 # https://ehmatthes.github.io/pcc/chapter_16/README.html
 
-# from pygal.i18n import COUNTRIES
 from pygal.maps.world import COUNTRIES
+
 
 for country_code in sorted(COUNTRIES.keys()):
 	print(country_code, COUNTRIES[country_code])
