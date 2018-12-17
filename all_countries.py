@@ -1,7 +1,39 @@
+"""
+Missing the following country codes:
+
+South America:
+    French Guiana (gf)
+
+Asia:
+    Korea, Republic of (kr)
+    Korea, Democratic People’s Republic of (kp)
+    Viet Nam (vn)
+    Lao People’s Democratic Republic (la)
+    Taiwan (Republic of China) (tw)
+    Kyrgyzstan (kg)
+
+Middle East:
+    Iran, Islamic Republic of (ir)
+
+Africa:
+    Egypt (eg)
+    Libyan Arab Jamahiriya (ly)
+    Western Sahara (eh)
+    Tanzania, United Republic of (tz)
+    Congo, the Democratic Republic of the (cd)
+    Congo (cg)
+
+Europe:
+    Slovakia (sk)
+    Moldova, Republic of (md)
+
+"""
+
+
 import json
 
 from pygal.maps.world import World
-from country_codes import get_country_code
+from country_codes_two import get_country_code
 from pygal.style import LightColorizedStyle as LCS, RotateStyle as RS
 
 
@@ -36,10 +68,9 @@ print(len(cc_pops_1), len(cc_pops_2), len(cc_pops_3))
 
 wm_style = RS('#336699', base_style=LCS)
 wm = World(style=wm_style)
-wm.force_uri_protocol = 'http'
 wm.title = 'World Population in 2010, by Country'
 wm.add('0-10m', cc_pops_1)
 wm.add('10m, 1bn', cc_pops_2)
 wm.add('>1bn', cc_pops_3)
 
-wm.render_to_file('world_population.svg')
+wm.render_to_file('all_countries.svg')
