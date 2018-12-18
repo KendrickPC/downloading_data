@@ -11,7 +11,7 @@ Plotting data on a Worldmap and style the map.
 import json
 
 from pygal.maps.world import World
-from country_gdp import get_country_code
+from countries_gdp import get_country_code
 
 # Load the data into a list.
 filename = 'gdp.json'
@@ -23,5 +23,5 @@ with open(filename) as f:
 for gdp_dict in gdp_data:
     if gdp_dict['Year'] == 2016:
         country_name = gdp_dict['Country Name']
-        gdp_value = gdp_dict['Value']
+        gdp_value = int(float(gdp_dict['Value']))
         print(country_name + ": " + str(gdp_value))
