@@ -1,17 +1,10 @@
-# This code runs on Python 2.7
+# Can't import COUNTRIES from pygal.i18n
+# https://stackoverflow.com/questions/35770931/cant-import-countries-from-pygal-i18n
+# Solution:
+# https://ehmatthes.github.io/pcc/chapter_16/README.html
 
-# from pygal.i18n import COUNTRIES
 from pygal.maps.world import COUNTRIES
 
 
-def get_country_code(country_name):
-    """Return the Pygal 2-digit country code for the given country."""
-    for code, name in COUNTRIES.items():
-        if name == country_name:
-            return code
-    # If the country wasn't found, return None.
-    return None
-
-# print(get_country_code('Andorra'))
-# print(get_country_code('United Arab Emirates'))
-# print(get_country_code('Afghanistan'))
+for country_code in sorted(COUNTRIES.keys()):
+    print(country_code, COUNTRIES[country_code])
