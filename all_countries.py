@@ -1,33 +1,4 @@
-"""
-Missing the following country codes:
 
-South America:
-    French Guiana (gf)
-
-Asia:
-    Korea, Republic of (kr)
-    Korea, Democratic People’s Republic of (kp)
-    Viet Nam (vn)
-    Lao People’s Democratic Republic (la)
-    Taiwan (Republic of China) (tw)
-    Kyrgyzstan (kg)
-
-Middle East:
-    Iran, Islamic Republic of (ir)
-
-Africa:
-    Egypt (eg)
-    Libyan Arab Jamahiriya (ly)
-    Western Sahara (eh)
-    Tanzania, United Republic of (tz)
-    Congo, the Democratic Republic of the (cd)
-    Congo (cg)
-
-Europe:
-    Slovakia (sk)
-    Moldova, Republic of (md)
-
-"""
 
 
 import json
